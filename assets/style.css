@@ -5,6 +5,11 @@
     --aqua: #9fd3c7;
 }
 
+::selection {
+    background-color: var(--aqua);
+    color: var(--navy);
+}
+
 * {
     background-color: var(--dark);
 }
@@ -19,29 +24,49 @@ header p {
     color: var(--light);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 90%;
+    padding: 1.5rem;
 }
 
 section p {
     color: var(--aqua);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 
 code {
     color: var(--light);
-    background-color: var(--navy);
     font-family: monospace;
     font-size: 100%;
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4;
+    padding: 1.2rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-image: linear-gradient(var(--dark), var(--navy))
+}
+
+code:active {
+    user-select: all;
 }
 
 header {
     text-align: center;
+    margin: 0 auto;
+    padding: 2.5rem;
+    width: 90%
 }
 
 footer {
     text-align: center;
     font-size: 125%;
+    margin: 0 auto;
+    padding: 1.5rem;
 }
 
 h1 {
@@ -50,4 +75,20 @@ h1 {
 
 h2 {
     font-size: 150%;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    justify-content: center;
+
+}
+
+main {
+    width: 96%;
+    margin: 2rem auto;
 }
