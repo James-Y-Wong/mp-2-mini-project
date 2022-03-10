@@ -18,11 +18,13 @@ h1, h2, h3 {
 header p {
     color: var(--light);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
 }
 
 section p {
     color: var(--aqua);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
 }
 
 
@@ -30,8 +32,22 @@ code {
     color: var(--light);
     background-color: var(--navy);
     font-family: monospace;
+    font-size: 100%;
 }
 
 header {
- 
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    font-size: 125%;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
 }
