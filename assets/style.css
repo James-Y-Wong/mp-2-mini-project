@@ -14,130 +14,130 @@
     background-color: var(--dark);
 }
 
-h1, h2, h3 {
+h1 {
+    font-size: 3rem;
     color: var(--aqua);
-    font-weight: bolder;
+    text-align: center;
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--aqua);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--aqua);
+    text-align: center;
+    margin-bottom: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header p {
     color: var(--light);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 90%;
-    padding: 1.5rem;
-}
-
-section p {
-    color: var(--aqua);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 75%;
-    flex-wrap: wrap;
     text-align: center;
+    margin-top: 1.5rem;
+    font-size: .75rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+figure p {
+    color: var(--aqua);
+    font-size: .75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 1rem;
+}
 
 code {
     color: var(--light);
     font-family: monospace;
-    font-size: 100%;
-    white-space: pre-wrap;
-    overflow: auto;
-    tab-size: 4;
-    padding: 1.2rem 1rem;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
     background-image: linear-gradient(var(--dark), var(--navy));
+    white-space: pre-wrap;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    border-radius: 8px;
+    tab-size: 4;
+    /* overflow: auto; */
+    padding: 1.2rem 1.2rem;
 }
 
 code:active {
     user-select: all;
 }
 
-header {
-    text-align: center;
-    margin: 0 auto;
-    padding: 1.5rem;
-    width: 90%
+.container {
+    padding: 2rem;
 }
 
-footer {
-    text-align: center;
-    font-size: 125%;
-    margin: 0 auto;
-    padding: 1.5rem;
+.cell {
+    padding: 1rem;
+    border-style: dotted;
+    outline: 1px dashed var(--light);
+    margin: 1rem;
+    transition: all 0.5s ease-in-out;
 }
 
-h1 {
-    font-size: 200%;
-}
 
-h2 {
-    font-size: 150%;
-    text-align: center;
-}
-
-.row {
+.flex {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
-    justify-content: center;
-    padding: 20px;
-    gap: 20px;
-
+    gap: 1rem;
 }
 
-main {
-    width: 96%;
-    margin: 2rem auto;
+.flex > .cell {
+    flex: 1 1 33%;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat (12, 1fr);
-    gap: 20px;
-    width: calc(100%/3);
-    /* flex: 1 0 100%;
-    padding: 1rem; */
-    transition: flex-basis 500ms linear;
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-direction: column;
+.cell-header {
+    position: relative;
+    margin-top: -40px;
+    outline: 1px solid var(--light);
+    padding: .5rem;
+    border-radius: 8px;
 }
 
-.code-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 100%;
-    outline: 2px dashed var(--light)
-
-
+.code-card .cell-header {
+    transition: all 0.5s ease-in-out;
 }
 
-/* @media screen and (min-width: 768px) { */
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    /* .grid {
-      flex: 0 0 50%;
-      max-width: 33.3%;
-    } */
-  
-    /* select the last child to grow to full width if it has space to grow */
-    /* .grid:last-child {
-      flex-grow: 1;
+.code-card:hover, 
+.code-card:hover .cell-header {
+    box-shadow: inset 0px 0px 8px
+    var(--light)), 0 0 15px
+    var(var(--light));
+}
+
+@media screen and (min-width: 768px) {
+    .cell {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-  } */
-  
-  /* media query for larger screens */
-  /* @media screen and (min-width: 992px) {
+
+    .cell:last-child {
+        flex-grow: 1;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
     header {
-      width: 75%;
+        width: 75%;
     }
-  
-    .grid {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
+
+    footer {
+        width: 75%;
     }
-  }*/
+
+    .cell {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+    
+}
+}
