@@ -31,7 +31,6 @@ section p {
     color: var(--aqua);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 75%;
-    display: flex;
     flex-wrap: wrap;
     text-align: center;
 }
@@ -48,7 +47,7 @@ code {
     display: flex;
     align-items: center;
     border-radius: 8px;
-    background-image: linear-gradient(var(--dark), var(--navy))
+    background-image: linear-gradient(var(--dark), var(--navy));
 }
 
 code:active {
@@ -58,7 +57,7 @@ code:active {
 header {
     text-align: center;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 1.5rem;
     width: 90%
 }
 
@@ -85,6 +84,8 @@ h2 {
     margin-left: -1.5rem;
     margin-right: -1.5rem;
     justify-content: center;
+    padding: 20px;
+    gap: 20px;
 
 }
 
@@ -92,3 +93,51 @@ main {
     width: 96%;
     margin: 2rem auto;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    gap: 20px;
+    width: calc(100%/3);
+    /* flex: 1 0 100%;
+    padding: 1rem; */
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    outline: 2px dashed var(--light)
+
+
+}
+
+/* @media screen and (min-width: 768px) { */
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    /* .grid {
+      flex: 0 0 50%;
+      max-width: 33.3%;
+    } */
+  
+    /* select the last child to grow to full width if it has space to grow */
+    /* .grid:last-child {
+      flex-grow: 1;
+    }
+  } */
+  
+  /* media query for larger screens */
+  /* @media screen and (min-width: 992px) {
+    header {
+      width: 75%;
+    }
+  
+    .grid {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
+  }*/
